@@ -6,6 +6,10 @@ import { ROUTES } from "./constants/ROUTES";
 import Home from "./pages/home";
 
 const About = React.lazy(() => import("./pages/about"));
+const ContactPage = React.lazy(() => import("./pages/contacts"));
+const Work = React.lazy(() => import("./pages/work"));
+const Picteresque = React.lazy(() => import("./pages/picteresque"));
+const ReactPlayer = React.lazy(() => import("./pages/reactPlayer"));
 
 export default function App() {
   return (
@@ -16,6 +20,18 @@ export default function App() {
         </Route>
         <Route path={ROUTES.ABOUT}>
           <About />
+        </Route>
+        <Route path={ROUTES.WORK}>
+          <Work />
+        </Route>
+        <Route path={ROUTES.CONTACT}>
+          <ContactPage />
+        </Route>
+        <Route path={ROUTES.PICTERESQUE}>
+          <Picteresque />
+        </Route>
+        <Route path={ROUTES.REACTPLAYER}>
+          <ReactPlayer />
         </Route>
       </React.Suspense>
     </Switch>

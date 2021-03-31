@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
     html{
         height: 100%;
         box-sizing: border-box;
+        scroll-behavior: smooth;
     }
 
     *, *::after, *::before{
@@ -17,7 +18,6 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Josefin Sans', sans-serif;
         color: #1A1C1A;
         background-color: #F3DFC1;
-        
     }
 
     a{
@@ -45,6 +45,12 @@ export const GlobalStyle = createGlobalStyle`
     ul{ 
         padding: 0;
         margin: 0;
+    }
+
+
+    ::-webkit-scrollbar{
+        width: 0;
+        background-color: transparent;
     }
 
 `;

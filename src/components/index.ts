@@ -3,3 +3,7 @@ export { default as Nav } from "./nav";
 export { default as Footer } from "./footer";
 export { default as Sidebar } from "./sidebar";
 export { default as AboutComp } from "./about";
+export { default as Table } from "./table";
+export { default as Contacts } from "./contacts";
+export { default as Work } from "./work";
+export { default as Project } from "./project";

@@ -3,4 +3,6 @@ export enum ROUTES {
   ABOUT = "/about",
   WORK = "/works",
   CONTACT = "/contact",
+  PICTERESQUE = "/picteresque",
+  REACTPLAYER = "/reactplayer",
 }

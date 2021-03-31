@@ -12,6 +12,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   font-size: 85px;
+  text-transform: uppercase;
   /* text-shadow: -1px -1px 0 #1a1c1a, 1px -1px 0 #1a1c1a, -1px 1px 0 #1a1c1a, для outlined строк
     1px 1px 0 #1a1c1a; */
   color: #1a1c1a;
@@ -19,6 +20,7 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.div`
-  width: 20%;
+  width: 50%;
+  font-size: 1.2rem;
   align-self: flex-end;
 `;
