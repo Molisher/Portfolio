@@ -7,4 +7,5 @@ export const Container = styled.footer`
 
 export const Link = styled.a`
   text-transform: uppercase;
+  margin: 0 2rem;
 `;

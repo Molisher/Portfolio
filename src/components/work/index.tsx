@@ -2,13 +2,25 @@ import React from "react";
 
 import { Container, Link } from "./styles/work";
 
+import { MainAnimaton } from "../../animation";
+
 export default function Work({
   children,
   ...restProps
 }: {
   children: React.ReactNode;
 }) {
-  return <Container {...restProps}>{children}</Container>;
+  return (
+    <Container
+      variants={MainAnimaton}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      {...restProps}
+    >
+      {children}
+    </Container>
+  );
 }
 
 Work.Link = function ({

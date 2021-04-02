@@ -1,6 +1,8 @@
 import styled from "styled-components/macro";
 
-export const Container = styled.div`
+import { motion } from "framer-motion";
+
+export const Container = styled(motion.div)`
   flex: 0 0 60%;
   display: flex;
   flex-direction: column;
@@ -8,6 +10,14 @@ export const Container = styled.div`
   align-self: flex-end;
   padding-right: 13rem;
   margin-left: auto;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 10%;
+  }
+  @media (max-width: 500px) {
+    padding: 5%;
+  }
 `;
 
 export const Title = styled.h1`
@@ -15,6 +25,15 @@ export const Title = styled.h1`
   text-transform: uppercase;
   margin-bottom: 8rem;
   white-space: nowrap;
+
+  @media (max-width: 700px) {
+    margin-top: 1rem;
+    font-size: 3rem;
+  }
+  @media (max-width: 400px) {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -62,5 +81,12 @@ export const Image = styled.div`
     top: 0;
     margin-left: -20%;
     width: 140%;
+  }
+
+  @media (max-width: 1150px) {
+    img {
+      width: 100%;
+      margin: 0;
+    }
   }
 `;

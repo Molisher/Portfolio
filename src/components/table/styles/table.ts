@@ -10,6 +10,10 @@ export const Title = styled.h2`
   letter-spacing: 5px;
   border-bottom: 3px solid rgba(26, 28, 26, 0.9);
   margin-bottom: 5rem;
+
+  @media (max-width: 700px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Row = styled.div`

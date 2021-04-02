@@ -1,20 +1,14 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-
+import { Switch, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { About, Contact, Work, Home, Picteresque, ReactPlayer } from "./pages";
 import { ROUTES } from "./constants/ROUTES";
 
-import Home from "./pages/home";
-
-const About = React.lazy(() => import("./pages/about"));
-const ContactPage = React.lazy(() => import("./pages/contacts"));
-const Work = React.lazy(() => import("./pages/work"));
-const Picteresque = React.lazy(() => import("./pages/picteresque"));
-const ReactPlayer = React.lazy(() => import("./pages/reactPlayer"));
-
 export default function App() {
+  const location = useLocation();
   return (
-    <Switch>
-      <React.Suspense fallback={<div>Loading...</div>}>
+    <AnimatePresence exitBeforeEnter>
+      <Switch location={location} key={location.pathname}>
         <Route exact path={ROUTES.HOME}>
           <Home />
         </Route>
@@ -25,7 +19,7 @@ export default function App() {
           <Work />
         </Route>
         <Route path={ROUTES.CONTACT}>
-          <ContactPage />
+          <Contact />
         </Route>
         <Route path={ROUTES.PICTERESQUE}>
           <Picteresque />
@@ -33,7 +27,7 @@ export default function App() {
         <Route path={ROUTES.REACTPLAYER}>
           <ReactPlayer />
         </Route>
-      </React.Suspense>
-    </Switch>
+      </Switch>
+    </AnimatePresence>
   );
 }

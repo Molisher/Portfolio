@@ -12,5 +12,5 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  opacity: 0.5;
+  color: rgba(26, 28, 26, 0.5);
 `;

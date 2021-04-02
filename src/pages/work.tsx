@@ -1,20 +1,12 @@
 import React from "react";
-import { Sidebar, Work as WorkComp } from "../components";
+import { PageWrapper, Work as WorkComp } from "../components";
 import { ROUTES } from "../constants/ROUTES";
+import { SidebarContainer } from "../containers";
 
 export default function Work() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-      }}
-    >
-      <Sidebar>
-        <Sidebar.BackButton to={ROUTES.HOME} />
-        <Sidebar.Title>Dmitry Belov</Sidebar.Title>
-        <Sidebar.SubTitle>About</Sidebar.SubTitle>
-      </Sidebar>
+    <PageWrapper>
+      <SidebarContainer subtitle="Work" />
       <WorkComp>
         <WorkComp.Link to={ROUTES.PICTERESQUE} number="01">
           Picteresque
@@ -23,6 +15,6 @@ export default function Work() {
           React Player
         </WorkComp.Link>
       </WorkComp>
-    </div>
+    </PageWrapper>
   );
 }

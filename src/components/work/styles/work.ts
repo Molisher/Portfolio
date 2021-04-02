@@ -1,7 +1,9 @@
 import styled from "styled-components/macro";
 import { Link as RouterLink } from "react-router-dom";
 
-export const Container = styled.div`
+import { motion } from "framer-motion";
+
+export const Container = styled(motion.div)`
   flex: 0 0 60%;
   display: flex;
   flex-direction: column;
@@ -9,6 +11,14 @@ export const Container = styled.div`
   align-self: flex-end;
   padding-right: 13rem;
   margin-left: auto;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 10%;
+  }
+  @media (max-width: 500px) {
+    padding: 5%;
+  }
 `;
 
 export const Link = styled(RouterLink)`
@@ -38,5 +48,14 @@ export const Link = styled(RouterLink)`
       opacity: 1;
       transform: translate3d(0, 0, 0);
     }
+  }
+
+  @media (max-width: 700px) {
+    letter-spacing: 0;
+    font-size: 4rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 2rem;
   }
 `;

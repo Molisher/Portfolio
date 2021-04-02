@@ -7,3 +7,4 @@ export { default as Table } from "./table";
 export { default as Contacts } from "./contacts";
 export { default as Work } from "./work";
 export { default as Project } from "./project";
+export { default as PageWrapper } from "./pageWrapper";

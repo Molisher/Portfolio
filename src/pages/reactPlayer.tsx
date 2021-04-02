@@ -1,20 +1,11 @@
 import React from "react";
-import { Project, Sidebar } from "../components";
-import { ROUTES } from "../constants/ROUTES";
+import { PageWrapper, Project } from "../components";
+import { SidebarContainer } from "../containers";
 
 export default function ReactPlayer() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-      }}
-    >
-      <Sidebar>
-        <Sidebar.BackButton to={ROUTES.HOME} />
-        <Sidebar.Title>Dmitry Belov</Sidebar.Title>
-        <Sidebar.SubTitle>Work</Sidebar.SubTitle>
-      </Sidebar>
+    <PageWrapper>
+      <SidebarContainer subtitle="Work" link="back" />
       <Project>
         <Project.Title>React Player</Project.Title>
         <Project.Wrapper>
@@ -27,17 +18,9 @@ export default function ReactPlayer() {
           </Project.Meta>
         </Project.Wrapper>
         <Project.Description>
-          HD Vest, one of the largest financial advisory groups in the US, takes
-          a tax-smart approach to financial planning that allows their Advisors
-          to provide a uniquely strategic perspective for their clients.
-        </Project.Description>
-        <Project.Description>
-          The team at HD Vest came to Handsome in dire need of a modern website
-          that reflected their unique approach to advisory and investing. By
-          rethinking the information architecture, content, personality, and
-          visual design of the site, we were able to help HD Vest turn over a
-          new leaf and better communicate their message to advisors and clients
-          alike.
+          Simple audio player, song selectable, rewindable and fully responsive.
+          Created after graduate work to better understand audio elements in
+          React
         </Project.Description>
         <Project.ExternalLink
           href="https://molisher.github.io/react-player/"
@@ -56,6 +39,6 @@ export default function ReactPlayer() {
           <Project.Meta title="Credits">Dmitry Belov</Project.Meta>
         </Project.Wrapper>
       </Project>
-    </div>
+    </PageWrapper>
   );
 }

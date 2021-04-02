@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Container, Title, Description } from "./styles/about";
+import { MainAnimaton } from "../../animation";
 
 export default function AboutComp({
   children,
@@ -8,7 +9,17 @@ export default function AboutComp({
 }: {
   children: React.ReactNode;
 }) {
-  return <Container {...restProps}>{children}</Container>;
+  return (
+    <Container
+      variants={MainAnimaton}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      {...restProps}
+    >
+      {children}
+    </Container>
+  );
 }
 
 AboutComp.Title = function AboutCompTitle({

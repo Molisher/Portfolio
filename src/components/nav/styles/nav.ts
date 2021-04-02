@@ -10,6 +10,12 @@ export const Container = styled.nav`
   display: flex;
   width: 100%;
   transform: translateX(-35%);
+
+  @media (max-width: 1024px) {
+    transform: translateX(0);
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Inner = styled.ul.attrs<InnerProps>(({ positionX }) => ({
@@ -22,11 +28,20 @@ export const Inner = styled.ul.attrs<InnerProps>(({ positionX }) => ({
   justify-content: space-between;
   transition-duration: 0.5s;
   transition-timing-function: ease-out;
-
   padding-right: 60%;
+
+  @media (max-width: 1024px) {
+    transform: translateX(0) !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+  }
 `;
 
 export const Link = styled(ReactRouterLink)`
+  display: flex;
   font-size: 200px;
   text-transform: uppercase;
   color: rgba(26, 28, 26, 0.5);
@@ -34,6 +49,19 @@ export const Link = styled(ReactRouterLink)`
 
   &:hover {
     color: rgba(26, 28, 26, 1);
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 8rem;
+    padding: 2rem;
+  }
+  @media (max-width: 770px) {
+    font-size: 5rem;
+    padding: 2rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 3rem;
+    padding: 2rem;
   }
 `;
 
@@ -48,4 +76,5 @@ export const Break = styled.div`
 
 export const Number = styled.span`
   align-self: flex-start;
+  font-size: 1rem;
 `;

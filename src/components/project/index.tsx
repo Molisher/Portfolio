@@ -9,13 +9,25 @@ import {
   Image,
 } from "./styles/project";
 
+import { MainAnimaton } from "../../animation";
+
 export default function Project({
   children,
   ...restProps
 }: {
   children: React.ReactNode;
 }) {
-  return <Container {...restProps}>{children}</Container>;
+  return (
+    <Container
+      variants={MainAnimaton}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      {...restProps}
+    >
+      {children}
+    </Container>
+  );
 }
 
 Project.Title = function ({

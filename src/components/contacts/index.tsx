@@ -8,13 +8,25 @@ import {
   Signature,
 } from "./styles/contacts";
 
+import { MainAnimaton } from "../../animation";
+
 export default function Contacts({
   children,
   ...restProps
 }: {
   children: React.ReactNode;
 }) {
-  return <Container {...restProps}>{children}</Container>;
+  return (
+    <Container
+      variants={MainAnimaton}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+      {...restProps}
+    >
+      {children}
+    </Container>
+  );
 }
 
 Contacts.Title = function ({
@@ -47,14 +59,16 @@ Contacts.Wrapper = function ({
 Contacts.ExternalLink = function ({
   href,
   children,
+  target,
   ...restProps
 }: {
   href: string;
   children: React.ReactNode;
+  target?: string;
 }) {
   return (
     <>
-      <ExternalLink href={href} {...restProps}>
+      <ExternalLink href={href} target={target} {...restProps}>
         {children}
         <img
           src={`/images/icons/diagonal-arrow-svgrepo-com.svg`}

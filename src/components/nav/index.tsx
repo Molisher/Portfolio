@@ -2,6 +2,9 @@ import React from "react";
 import { useMouse } from "../../hooks/useMouse";
 import { Container, Link, Inner, Break, Number } from "./styles/nav";
 
+import { MainAnimaton } from "../../animation";
+import { motion } from "framer-motion";
+
 export default function Nav({
   children,
   ...restProps
@@ -27,9 +30,16 @@ Nav.Link = function NavLink({
   children: React.ReactNode;
 }) {
   return (
-    <Link to={to} {...restProps}>
-      {children}
-    </Link>
+    <motion.div
+      variants={MainAnimaton}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
+      <Link to={to} {...restProps}>
+        {children}
+      </Link>
+    </motion.div>
   );
 };
 
