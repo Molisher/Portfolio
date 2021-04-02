@@ -22,14 +22,14 @@ export default function About() {
           <Table.Title>Experience</Table.Title>
           <Table.Content>
             <Table.Row>
-              <Table.Column>BobruiskAgromach</Table.Column>
-              <Table.Column>Electromechanic</Table.Column>
-              <Table.Column>2018-2020</Table.Column>
-            </Table.Row>
-            <Table.Row>
               <Table.Column>School of Business of BSU</Table.Column>
               <Table.Column>React Developer</Table.Column>
               <Table.Column>March 2020 – October 2020</Table.Column>
+            </Table.Row>
+            <Table.Row>
+              <Table.Column>BobruiskAgromach</Table.Column>
+              <Table.Column>Electromechanic</Table.Column>
+              <Table.Column>2018-2020</Table.Column>
             </Table.Row>
           </Table.Content>
         </Table>
