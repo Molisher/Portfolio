@@ -87,7 +87,7 @@ Project.ExternalLink = function ({
     <ExternalLink href={href} target={target} {...restProps}>
       {children}
       <img
-        src="/images/icons/diagonal-arrow-svgrepo-com.svg"
+        src="images/icons/diagonal-arrow-svgrepo-com.svg"
         alt="Link to site"
       />
     </ExternalLink>

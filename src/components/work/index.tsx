@@ -38,7 +38,7 @@ Work.Link = function ({
       {children}
       <span>{number}</span>
       <img
-        src={`/images/icons/diagonal-arrow-svgrepo-com.svg`}
+        src={`images/icons/diagonal-arrow-svgrepo-com.svg`}
         alt="Link to project"
       />
     </Link>
