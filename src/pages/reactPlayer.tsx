@@ -28,7 +28,7 @@ export default function ReactPlayer() {
         >
           View Site
         </Project.ExternalLink>
-        <Project.Image src="/images/reactPlayer/main.png" />
+        <Project.Image src="images/reactPlayer/main.png" />
         <Project.Wrapper>
           <Project.ExternalLink
             href="https://molisher.github.io/react-player/"

@@ -32,9 +32,9 @@ export default function Picteresque() {
         >
           View Site
         </Project.ExternalLink>
-        <Project.Image src="/images/picteresque/main.png" />
-        <Project.Image src="/images/picteresque/work.png" />
-        <Project.Image src="/images/picteresque/workInner.png" />
+        <Project.Image src="images/picteresque/main.png" />
+        <Project.Image src="images/picteresque/work.png" />
+        <Project.Image src="images/picteresque/workInner.png" />
         <Project.Wrapper>
           <Project.ExternalLink
             href="https://molisher.github.io/picturesque/#/"

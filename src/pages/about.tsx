@@ -22,7 +22,7 @@ export default function About() {
           <Table.Title>Experience</Table.Title>
           <Table.Content>
             <Table.Row>
-              <Table.Column>BOBRUISKAGROMACH</Table.Column>
+              <Table.Column>BobruiskAgromach</Table.Column>
               <Table.Column>Electromechanic</Table.Column>
               <Table.Column>2018-2020</Table.Column>
             </Table.Row>

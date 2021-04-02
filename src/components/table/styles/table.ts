@@ -30,5 +30,9 @@ export const Column = styled.div`
     text-align: end;
   }
   flex-grow: 1;
+  word-wrap: wrap;
+  @media (max-width: 600px) {
+    font-size: 0.8rem;
+  }
 `;
 export const Content = styled.div``;
