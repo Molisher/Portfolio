@@ -27,9 +27,9 @@ export default function About() {
               <Table.Column>March 2020 – October 2020</Table.Column>
             </Table.Row>
             <Table.Row>
-              <Table.Column>BobruiskAgromach</Table.Column>
-              <Table.Column>Electromechanic</Table.Column>
-              <Table.Column>2018-2020</Table.Column>
+              <Table.Column>JustAi</Table.Column>
+              <Table.Column>Frontend developer</Table.Column>
+              <Table.Column>2021-present</Table.Column>
             </Table.Row>
           </Table.Content>
         </Table>
